@@ -1,11 +1,12 @@
-type TransferSingle @entity(immutable: true) {
-  id: Bytes!
-  operator: Bytes! # address
-  from: Bytes! # address
-  to: Bytes! # address
-  Monekop1155_id: BigInt! # uint256
-  value: BigInt! # uint256
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
+# type Pokemon @entity(immutable: true) {
+#   id: Bytes!
+# }
+
+type User @entity(immutable: false) {
+  id: ID!
+  pokemonsCount: BigInt!
+  # pokemons: {
+  #   total: BigInt!
+  #   items: [Pokemon!]!
+  # }
 }
