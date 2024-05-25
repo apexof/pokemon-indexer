@@ -17,6 +17,7 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - User
+        - Pokemon
       abis:
         - name: Monekop1155
           file: ./abis/Monekop1155.json
