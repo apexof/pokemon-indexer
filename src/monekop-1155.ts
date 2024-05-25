@@ -9,6 +9,7 @@ export function handleTransferSingle(event: TransferSingleEvent): void {
     user = new User(userAddress)
     user.pokemonsCount = BigInt.fromI32(0);
   }
+  const pokemonId = event.params.id
   user.pokemonsCount = user.pokemonsCount.plus(BigInt.fromI32(1));
   user.save()
 }
