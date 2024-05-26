@@ -1,11 +1,9 @@
 type Pokemon @entity(immutable: true) {
   id: ID!
-  name: String!
   owner: User!
 }
 
-type User @entity(immutable: false) {
+type User @entity(immutable: true) {
   id: ID!
-  pokemonsCount: BigInt!
   pokemons: [Pokemon!]! @derivedFrom(field: "owner") 
 }
